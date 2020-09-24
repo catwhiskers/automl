@@ -75,6 +75,7 @@ def transformation():
         print(f'Input Data: {raw_payload}')
         payload = json.loads(raw_payload)
         data = pd.DataFrame([payload])
+        print(f'Data Frame: {data}')
     else:
         return flask.Response(
             response='This predictor only supports JSON or CSV data.  data is preferred.',
